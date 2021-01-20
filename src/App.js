@@ -1,14 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+/* import Hello from './hello/Hello' */
+import Calculator from './calc/Calculator'
+import NumberProvider from './calc/NumberProvider' 
 
-const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-          안녕리액트!!
-      </header>
-    </div>
-  );
-}
+const App = () => (<NumberProvider><Calculator/></NumberProvider>)
+
+/* const App = () => (<Hello/>) */
 
 export default App;

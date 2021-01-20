@@ -1,13 +1,15 @@
 import React, { useContext } from 'react'
 import { NumberContext } from './NumberProvider'
 
-const NumberButton = (buttonValue) => {
-    const { handleSetDisplayValue } = useContext(NumberContext)
+const CalculatorButton = ({buttonValue}) => {
+    const { handleSetDisplayValue } = useContext( NumberContext )
     return (
-        <button type="button" onClick = { () => handleSetDisplayValue}>
+        <button type="button" 
+        onClick = { () => handleSetDisplayValue(buttonValue)}>
             {buttonValue}
         </button>
+        
     )
 }
 
-export default NumberButton 
+export default CalculatorButton
